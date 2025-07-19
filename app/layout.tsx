@@ -9,6 +9,7 @@ import Footer from "@/components/layout/footer";
 
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 
 // The authOptions and NextAuth handler should NOT be in layout.tsx.
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
