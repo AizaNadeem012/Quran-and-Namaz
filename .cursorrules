@@ -1,0 +1,24 @@
+
+# Scratchpad
+
+**Current Task:** Build a full-stack contact form submission system using PostgreSQL.
+
+**Plan:**
+- [X] Update `package.json` to include `next-auth`.
+- [X] Update `prisma/schema.prisma` for PostgreSQL and `ContactSubmission` model.
+- [X] Explain `.env` setup for PostgreSQL.
+- [X] Run `npx prisma migrate dev`.
+- [X] Implement `NextAuth` for authentication in `app/api/auth/[...nextauth]/route.ts`.
+- [X] Create `middleware.ts` to protect admin routes.
+- [X] Implement `POST /api/contact` (save submission).
+- [X] Implement `GET /api/admin/submissions` (get all submissions).
+- [X] Implement `PUT /api/admin/submissions/:id` (update submission).
+- [X] Implement `DELETE /api/admin/submissions/:id` (delete submission).
+- [X] Create `/contact` page with submission form.
+- [X] Create `/admin/login` page.
+- [X] Create `/admin/dashboard` page with table, edit, and delete features.
+- [X] Ensure UI is minimal, professional, and responsive with Tailwind CSS.
+- [X] Resolve "Cannot read properties of null (reading 'reset')" error in `/contact` form using `useRef` for form reset.
+- [X] Resolve NextAuth "Configuration" error by adding `NEXTAUTH_URL` to `.env`. (Ensure it matches the actual running port, typically 3000 or 3001).
+- [X] Resolve NextAuth "NO_SECRET" error by adding `NEXTAUTH_SECRET` to `.env`.
+- [X] Resolve "ERR_TOO_MANY_REDIRECTS" issue by clearing browser cookies and re-verifying NextAuth configuration. 
