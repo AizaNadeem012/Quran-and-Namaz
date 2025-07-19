@@ -11,14 +11,14 @@ import { useToast } from '@/components/ui/use-toast';
 
 interface Registration {
   id: string;
-  firstName: string;
-  lastName: string;
+  first_name: string;
+  last_name: string;
   email: string;
   phone: string;
   country: string;
   course: string;
   message: string;
-  createdAt: string; // ISO string
+  created_at: string; // ISO string
 }
 
 export default function DashboardPage() {
@@ -190,13 +190,13 @@ export default function DashboardPage() {
             <TableBody>
               {registrations.map((registration) => (
                 <TableRow key={registration.id}>
-                  <TableCell>{`${registration.firstName} ${registration.lastName}`}</TableCell>
+                  <TableCell>{`${registration.first_name} ${registration.last_name}`}</TableCell>
                   <TableCell>{registration.email}</TableCell>
                   <TableCell>{registration.phone}</TableCell>
                   <TableCell>{registration.country}</TableCell>
                   <TableCell>{registration.course}</TableCell>
                   <TableCell className="truncate max-w-xs">{registration.message}</TableCell>
-                  <TableCell>{new Date(registration.createdAt).toLocaleString()}</TableCell>
+                  <TableCell>{new Date(registration.created_at).toLocaleString()}</TableCell>
                   <TableCell className="flex space-x-2">
                     <Button variant="outline" size="sm" onClick={() => handleEditClick(registration)}>Edit</Button>
                     <Button variant="destructive" size="sm" onClick={() => handleDeleteClick(registration.id)}>Delete</Button>
@@ -217,11 +217,11 @@ export default function DashboardPage() {
               <div className="grid gap-4 py-4">
                 <div className="grid grid-cols-4 items-center gap-4">
                   <label htmlFor="firstName" className="text-right">First Name</label>
-                  <Input id="firstName" name="firstName" value={editingRegistration.firstName} onChange={handleEditChange} className="col-span-3" />
+                  <Input id="firstName" name="first_name" value={editingRegistration.first_name} onChange={handleEditChange} className="col-span-3" />
                 </div>
                 <div className="grid grid-cols-4 items-center gap-4">
                   <label htmlFor="lastName" className="text-right">Last Name</label>
-                  <Input id="lastName" name="lastName" value={editingRegistration.lastName} onChange={handleEditChange} className="col-span-3" />
+                  <Input id="lastName" name="last_name" value={editingRegistration.last_name} onChange={handleEditChange} className="col-span-3" />
                 </div>
                 <div className="grid grid-cols-4 items-center gap-4">
                   <label htmlFor="email" className="text-right">Email</label>
