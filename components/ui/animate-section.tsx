@@ -15,6 +15,10 @@ export function AnimateSection({ children, className = "", delay = 0, from = 'bo
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (delay === 0) {
+      controls.set({ opacity: 1, x: 0, y: 0 });
+      return;
+    }
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -35,7 +39,7 @@ export function AnimateSection({ children, className = "", delay = 0, from = 'bo
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, x: from === 'left' ? -40 : from === 'right' ? 40 : 0, y: from === 'bottom' ? 40 : 0 }}
+      initial={{ opacity: delay === 0 ? 1 : 0, x: from === 'left' ? -40 : from === 'right' ? 40 : 0, y: from === 'bottom' ? 40 : 0 }}
       animate={controls}
       className={className}
     >

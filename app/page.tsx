@@ -268,9 +268,9 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-50 via-blue-50/30 to-amber-50/20 py-12 lg:py-16 px-4 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-slate-50 via-blue-50/30 to-amber-50/20 py-12 lg:py-16 px-2 sm:px-4 overflow-hidden w-full">
         {/* Light background image */}
         <img src="/book-quran.jpg" alt="Quran background" className="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none select-none z-0" />
         {/* Bismillah - always at the very top, full width, centered, responsive size */}
@@ -287,7 +287,7 @@ export default function HomePage() {
           <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-blue-900 rounded-full"></div>
         </div>
         <div className="container mx-auto max-w-7xl relative">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <AnimateSection className="space-y-7">
               <Badge className="!bg-[#060957] !text-white !border-[#060957] px-3 py-1 text-sm font-medium mb-6">
                 ✨ Trusted by 120+ Students Worldwide
@@ -335,7 +335,7 @@ export default function HomePage() {
                 ))}
               </div>
             </AnimateSection>
-            <AnimateSection className="relative" delay={0.2}>
+            <AnimateSection className="relative mt-10 sm:mt-0" delay={0.2}>
               <div className="relative bg-white rounded-3xl shadow-2xl p-6 border border-slate-200/50 backdrop-blur-sm">
                 <div className="aspect-video bg-gradient-to-br from-blue-50 to-amber-50 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
                   <video
@@ -347,7 +347,8 @@ export default function HomePage() {
                     playsInline
                     poster="/family.png"
                   />
-                  <div className="absolute inset-0 bg-[#060957]/10 rounded-2xl"></div>
+                  <div className="absolute inset-0 bg-black/50 rounded-2xl hidden sm:block"></div>
+                  <div className="absolute inset-0 bg-[#060957]/10 rounded-2xl hidden sm:block"></div>
                   <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                     🔴 LIVE
                   </div>
@@ -380,7 +381,7 @@ export default function HomePage() {
       </section>
 
       {/* Courses Section - Blue with animation */}
-      <section className="py-24 px-4 bg-[#060957]">
+      <section className="py-24 px-2 sm:px-4 bg-[#060957] w-full">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16 animate-fadeInDown">
             <Badge className="bg-white/10 text-white px-4 py-2 mb-6 shadow font-semibold tracking-wide animate-pulse">Our Programs</Badge>
@@ -393,7 +394,7 @@ export default function HomePage() {
             <button className="px-6 py-2 rounded-full bg-[#060957] text-white font-semibold shadow border border-white/20 hover:bg-white hover:text-[#060957] transition">Kids</button>
             <button className="px-6 py-2 rounded-full bg-[#060957] text-white font-semibold shadow border border-white/20 hover:bg-white hover:text-[#060957] transition">Adults</button>
           </div>
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {courseHighlights.map((course, idx) => (
               <motion.div
                 key={idx}
@@ -450,12 +451,12 @@ export default function HomePage() {
       </section>
 
       {/* Upcoming Events - Elegant Timeline Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-2 sm:px-4 bg-white w-full">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-12 text-left">
             This Week at <span className="text-[#060957]">Quran and Namaz</span>
           </h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Timeline Dates */}
             <div className="flex flex-col gap-12 md:col-span-1">
               <div>
@@ -535,7 +536,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-[#060957]">
+      <section className="py-16 px-2 sm:px-4 bg-[#060957] w-full">
         <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-10">
           {/* Left Content */}
           <motion.div
@@ -572,7 +573,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials - Modern, Elegant, Responsive Grid */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-24 px-2 sm:px-4 bg-white w-full">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl md:text-5xl font-extrabold text-black font-serif mb-4 text-center">
             What Our Students Say
@@ -637,7 +638,7 @@ export default function HomePage() {
       </section>
 
       {/* Sample Class Video - Unique, eye-catching, premium Islamic accent */}
-      <section className="py-28 px-4 bg-[#060957] relative overflow-hidden">
+      <section className="py-28 px-2 sm:px-4 bg-[#060957] relative overflow-hidden w-full">
         {/* Soft diagonal gradient background accent */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/5 via-amber-100/10 to-blue-900/5 pointer-events-none select-none z-0" />
         {/* Islamic accent SVG deleted */}
@@ -675,9 +676,9 @@ export default function HomePage() {
       </section>
 
       {/* FAQ - Modern Elegant Blue Card with Scroll Animation */}
-      <section className="py-20 px-4 flex justify-center items-center bg-white">
+      <section className="py-20 px-2 sm:px-4 flex justify-center items-center bg-white w-full">
         <AnimateSection className="w-full max-w-2xl mx-auto" from="left">
-          <div className="bg-[#060957] rounded-3xl shadow-2xl p-10 md:p-14">
+          <div className="bg-[#060957] rounded-3xl shadow-2xl p-6 sm:p-10 md:p-14">
             <h2 className="text-3xl md:text-4xl font-bold mb-10 font-serif text-white drop-shadow-lg">Frequently Asked Questions</h2>
             <div className="space-y-6">
               {[
@@ -723,7 +724,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact - Blue with animation */}
-      <section className="py-20 px-4 bg-[#060957] text-white text-center animate-fadeInUp">
+      <section className="py-20 px-2 sm:px-4 bg-[#060957] text-white text-center animate-fadeInUp w-full">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 font-serif">Contact Us</h2>
           <p className="text-xl mb-8 text-white/80 leading-relaxed max-w-2xl mx-auto">Have questions or need support? Our team is here to help you 24/7. Reach out via email, WhatsApp, or the contact form below.</p>
@@ -743,7 +744,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer - White with animation */}
-      <footer className="py-8 bg-white text-[#1E3A8A] text-center animate-fadeInUp">
+      <footer className="py-8 bg-white text-[#1E3A8A] text-center animate-fadeInUp w-full">
         <div className="container mx-auto max-w-4xl flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-lg font-bold animate-fadeInLeft">Quran and Namaz Academy</div>
           <div className="flex gap-6 animate-fadeInUp">

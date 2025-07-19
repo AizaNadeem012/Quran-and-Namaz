@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetPortal, SheetOverlay, SheetTrigger, SheetClose, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Menu, BookOpen, MessageCircle } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
@@ -37,13 +37,16 @@ export default function Header() {
                 <Menu className="h-10 w-10 text-white hover:text-black transition-colors" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-80">
+            <SheetContent side="right" className="w-80 bg-black text-white">
+              <SheetHeader>
+                <SheetTitle className="sr-only">Menu</SheetTitle>
+              </SheetHeader>
               <div className="flex flex-col space-y-6 mt-6">
                 <div className="flex items-center space-x-3">
                   <img src="/logo.jpg" alt="Quran and Namaz Logo" className="w-10 h-10 rounded-lg object-cover" />
                   <div>
-                    <div className="text-lg font-bold text-slate-800">Quran and Namaz</div>
-                    <div className="text-xs text-slate-600">Online Academy</div>
+                    <div className="text-lg font-bold text-white">Quran and Namaz</div>
+                    <div className="text-xs text-amber-400">Online Academy</div>
                   </div>
                 </div>
                 <Badge className="bg-amber-100 text-amber-800 px-4 py-2 mb-6 hover:bg-amber-600 hover:text-white transition-colors">
