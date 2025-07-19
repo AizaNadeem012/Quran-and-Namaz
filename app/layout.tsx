@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="overflow-x-hidden">
-      <body className={cn("min-h-screen bg-black sm:bg-background font-sans antialiased overflow-x-hidden", fontSans.variable)}>
+      <body className={cn("min-h-screen bg-background font-sans antialiased overflow-x-hidden", fontSans.variable)}>
         <Header />
         <main>{children}</main>
         <Footer />
