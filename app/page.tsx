@@ -683,14 +683,7 @@ export default function HomePage() {
               viewport={{ once: true, amount: 0.3 }}
               className="flex-1 flex justify-center"
             >
-              <div className="relative">
-                <div className="w-64 h-64 rounded-full border-4 border-[#060957] shadow-2xl overflow-hidden">
-                  <img src="/owner.jpg" alt="Hafiz Nisar Ahmed Mustafa" className="w-full h-full object-cover" />
-                </div>
-                <div className="absolute -bottom-4 -right-4 bg-[#060957] text-white px-4 py-2 rounded-full shadow-lg">
-                  <span className="font-bold">Founder & Director</span>
-                </div>
-              </div>
+            
             </motion.div>
             {/* Owner Information */}
             <motion.div

@@ -119,10 +119,10 @@ export default function AboutPage() {
       </div>
       {/* Our Story */}
       <div className="mb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="flex flex-col items-center justify-center">
           <motion.div
-            className="space-y-6 ml-8 md:ml-16"
-            initial={{ x: -100, opacity: 0 }}
+            className="space-y-6 max-w-2xl w-full"
+            initial={{ x: 0, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.5 }}
@@ -145,26 +145,6 @@ export default function AboutPage() {
               <p>
                 His mission has always been simple: To help every Muslim, young or old, connect with the Quran—not just through recitation, but with understanding, reflection, and love.
               </p>
-            </div>
-          </motion.div>
-          <motion.div
-            className="relative"
-            initial={{ x: 100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.5 }}
-          >
-            <div className="bg-gradient-to-br from-blue-50 via-white to-amber-50 rounded-3xl p-8 shadow-lg">
-              <Image
-                src="/namaz.jpg"
-                alt="Namaz - Islamic Prayer"
-                width={400}
-                height={300}
-                className="rounded-2xl w-full"
-              />
-              <div className="absolute -top-4 -right-4 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-                Since 2020
-              </div>
             </div>
           </motion.div>
         </div>
