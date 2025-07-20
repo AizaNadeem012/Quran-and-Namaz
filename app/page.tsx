@@ -40,7 +40,7 @@ export const TypingText = ({ text, speed = 80, className = "", style }: TypingTe
 import { Button, MotionButton } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { BookOpen, Users, Clock, Globe, Star, MessageCircle, Play, CheckCircle, Quote, Circle, Mail, Award } from "lucide-react"
+import { BookOpen, Users, Clock, Globe, Star, MessageCircle, Play, CheckCircle, Quote, Circle, Mail, Award, MessageSquare, Facebook, GraduationCap, Shield } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { AnimateSection } from "@/components/ui/animate-section";
@@ -144,7 +144,7 @@ export default function HomePage() {
     },
     {
       q: /contact|support|help|email|whatsapp/i,
-      a: "You can contact us via email at info@quranandnamaz.com or WhatsApp at +44 7123 456789."
+      a: "You can contact us via email at Infquranandnamaz@gmail.com or WhatsApp at 0316 5249017."
     },
     {
       q: /trial|free class/i,
@@ -187,7 +187,7 @@ export default function HomePage() {
     { q: /family.*package|siblings|discount/i, a: "Our Family Package allows multiple family members to enroll together at a discounted rate." },
     { q: /class.*recording|missed.*class/i, a: "Class recordings are available upon request if you miss a session." },
     { q: /technical.*requirement|device|internet/i, a: "You need a computer, tablet, or smartphone with internet access and Microsoft Teams installed." },
-    { q: /how.*contact|support|help/i, a: "You can reach us via email (Infquranandnamaz@gmail.com), WhatsApp (+92 316 5249017), or our contact page." },
+    { q: /how.*contact|support|help/i, a: "You can reach us via email (Infquranandnamaz@gmail.com), WhatsApp (0316 5249017), or our contact page." },
     { q: /certificate|completion/i, a: "Certificates are awarded upon successful completion of each course." },
     { q: /trial.*class|free.*trial/i, a: "We offer a free trial class for all new students. Register to book yours!" },
     { q: /how.*register|sign.*up/i, a: "Click on the 'Register' button on our website and fill out the form. Our team will contact you soon." },
@@ -222,7 +222,7 @@ export default function HomePage() {
     { q: /do.*offer.*weekend.*classes/i, a: "Weekend classes are available. Please mention your preference during registration." },
     { q: /can.*contact.*teacher.*directly/i, a: "You can communicate with your teacher via Teams or through the admin." },
     { q: /do.*offer.*islamic.*studies/i, a: "Yes, we offer Islamic studies as part of our curriculum." },
-    { q: /how.*follow.*updates|social.*media/i, a: "Follow us on Facebook and Instagram for updates: facebook.com/profile.php?id=61578041309911 and instagram.com/onlinequran.lisan" },
+    { q: /how.*follow.*updates|social.*media/i, a: "Follow us on Facebook and Instagram for updates: facebook.com/profile.php?id=61578041309911&mibextid=ZbWKwL and instagram.com/onlinequran.namaz" },
     { q: /do.*offer.*demo|sample.*class/i, a: "A demo class can be arranged on request. Contact us to schedule." },
     { q: /can.*parents.*get.*feedback/i, a: "Parents receive regular feedback and can request meetings with teachers." },
     { q: /do.*offer.*summer.*camp|intensive.*course/i, a: "We occasionally offer intensive courses and summer camps. Check our website for announcements." },
@@ -310,27 +310,55 @@ export default function HomePage() {
               <AnimateSection delay={0.3}>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/register">
-                    <Button size="sm" className="!bg-[#060957] !hover:bg-[#060957] text-white">Register Now</Button>
-                  </Link>
-                  <Link href="/classes">
                     <MotionButton
-                      variant="outline"
-                      size="lg"
-                      className="border-2 border-amber-600 text-amber-700 hover:bg-amber-50 px-6 py-3 text-lg rounded-xl bg-white/80 backdrop-blur-sm"
+                      size="sm"
+                      className="!bg-[#060957] !hover:bg-[#060957] text-white"
                     >
-                      <Play className="mr-2 h-5 w-5" />
-                      Join a Trial Class
+                      Register Now
                     </MotionButton>
                   </Link>
+                  <a 
+                    href="https://wa.me/03165249017?text=Assalamu%20Alaikum!%20I%20would%20like%20to%20join%20Quran%20and%20Namaz%20Academy.%20Please%20provide%20more%20information%20about%20your%20courses%20and%20registration%20process."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MotionButton
+                      size="lg"
+                      className="bg-green-600 hover:bg-green-700 text-white border-green-600 px-6 py-3 text-lg rounded-xl"
+                    >
+                      <MessageSquare className="mr-2 h-5 w-5 text-white" />
+                      WhatsApp Us
+                    </MotionButton>
+                  </a>
                 </div>
               </AnimateSection>
               <div className="flex items-center gap-8 pt-5">
                 {[0,1,2].map((i) => (
                   <AnimateSection key={i} delay={0.4 + i*0.1} className="text-center">
-                    {i === 0 && <><div className="text-2xl font-bold text-blue-900"><Counter to={120} duration={1200} suffix="+" /></div><div className="text-sm text-slate-600 font-medium">Active Students</div></>}
-                    {i === 1 && <><div className="text-2xl font-bold text-amber-600"><Counter to={10} duration={1200} suffix="+" /></div><div className="text-sm text-slate-600 font-medium">Expert Teachers</div></>}
-                    {i === 2 && <><div className="text-2xl font-bold text-green-600"><Counter to={80} duration={1200} suffix="+" /></div><div className="text-sm text-slate-600 font-medium">Quran Completions</div></>}
-                    {i === 3 && <><div className="text-2xl font-bold text-purple-600 flex items-center justify-center"><Counter to={4.7} decimals={1} duration={1200} /><span className="ml-1">★</span></div><div className="text-sm text-slate-600 font-medium">Student Rating</div></>}
+                    {i === 0 && (
+                      <div className="flex flex-col items-center">
+                        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-2">
+                          <Users className="h-6 w-6 text-blue-600" />
+                        </div>
+                        <div className="text-sm text-slate-600 font-medium">One on One Classes</div>
+                      </div>
+                    )}
+                    {i === 1 && (
+                      <div className="flex flex-col items-center">
+                        <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-2">
+                          <Shield className="h-6 w-6 text-amber-600" />
+                        </div>
+                        <div className="text-sm text-slate-600 font-medium">Wafaq ul Madaris Certified</div>
+                      </div>
+                    )}
+                    {i === 2 && (
+                      <div className="flex flex-col items-center">
+                        <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-2">
+                          <Clock className="h-6 w-6 text-green-600" />
+                        </div>
+                        <div className="text-sm text-slate-600 font-medium">Flexible Time</div>
+                      </div>
+                    )}
                   </AnimateSection>
                 ))}
               </div>
@@ -637,6 +665,85 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* About Me Section - Owner Information */}
+      <section className="py-24 px-2 sm:px-4 bg-white w-full">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-black font-serif mb-4 text-center">
+            About Our Founder
+          </h2>
+          <p className="text-lg text-black mb-12 text-center max-w-2xl mx-auto">
+            Meet the dedicated scholar behind Quran and Namaz Academy
+          </p>
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* Owner Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, type: "spring", bounce: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="flex-1 flex justify-center"
+            >
+              <div className="relative">
+                <div className="w-64 h-64 rounded-full border-4 border-[#060957] shadow-2xl overflow-hidden">
+                  <img src="/owner.jpg" alt="Hafiz Nisar Ahmed Mustafa" className="w-full h-full object-cover" />
+                </div>
+                <div className="absolute -bottom-4 -right-4 bg-[#060957] text-white px-4 py-2 rounded-full shadow-lg">
+                  <span className="font-bold">Founder & Director</span>
+                </div>
+              </div>
+            </motion.div>
+            {/* Owner Information */}
+            <motion.div
+              initial={{ opacity: 0, x: 80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, type: "spring", bounce: 0.2, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="flex-1"
+            >
+              <h3 className="text-3xl font-bold text-[#060957] mb-4">Hafiz Nisar Ahmed Mustafa</h3>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                A dedicated Islamic scholar and educator with over 15 years of experience in teaching Quran, 
+                Tajweed, and Islamic studies. Hafiz Nisar Ahmed Mustafa is committed to spreading authentic 
+                Islamic knowledge through modern technology and innovative teaching methods.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-[#060957] rounded-full flex items-center justify-center">
+                    <BookOpen className="h-5 w-5 text-white" />
+                  </div>
+                  <span className="text-gray-700 font-medium">Certified by Wafaq ul Madaris</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-[#060957] rounded-full flex items-center justify-center">
+                    <Users className="h-5 w-5 text-white" />
+                  </div>
+                  <span className="text-gray-700 font-medium">500+ Students Taught</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-[#060957] rounded-full flex items-center justify-center">
+                    <Award className="h-5 w-5 text-white" />
+                  </div>
+                  <span className="text-gray-700 font-medium">Specialized in Quran Memorization</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-[#060957] rounded-full flex items-center justify-center">
+                    <Globe className="h-5 w-5 text-white" />
+                  </div>
+                  <span className="text-gray-700 font-medium">International Teaching Experience</span>
+                </div>
+              </div>
+              <div className="mt-8">
+                <Link href="/contact">
+                  <Button className="bg-[#060957] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#060957]/90 transition-all duration-300 shadow-lg">
+                    Get in Touch
+                  </Button>
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Sample Class Video - Unique, eye-catching, premium Islamic accent */}
       <section className="py-28 px-2 sm:px-4 bg-[#060957] relative overflow-hidden w-full">
         {/* Soft diagonal gradient background accent */}
@@ -734,10 +841,15 @@ export default function HomePage() {
               <span className="font-bold">Email</span>
               <span className="text-white/80">info@quranandnamaz.com</span>
             </a>
-            <a href="https://wa.me/447123456789" className="bg-white/10 rounded-xl px-8 py-6 shadow hover:bg-white/20 transition text-white flex flex-col items-center">
+            <a href="https://wa.me/03165249017" className="bg-green-600 hover:bg-green-700 rounded-xl px-8 py-6 shadow transition text-white flex flex-col items-center">
               <MessageCircle className="h-8 w-8 mb-2" />
               <span className="font-bold">WhatsApp</span>
-              <span className="text-white/80">+44 7123 456789</span>
+              <span className="text-white/80">0316 5249017</span>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61578041309911&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="bg-white/10 rounded-xl px-8 py-6 shadow hover:bg-white/20 transition text-white flex flex-col items-center">
+              <Facebook className="h-8 w-8 mb-2" />
+              <span className="font-bold">Facebook</span>
+              <span className="text-white/80">Follow Us</span>
             </a>
           </div>
         </div>

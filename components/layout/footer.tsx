@@ -25,10 +25,10 @@ export default function Footer() {
               <span className="block mt-2 text-amber-300">All teachers educated in Wafaq ul Madaris.</span>
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/profile.php?id=61578041309911" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61578041309911&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://www.instagram.com/onlinequran.lisan?igsh=dHM1c3prbmg5cHB4" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/onlinequran.namaz?igsh=dHM1c3prbmg5cHB4" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -96,7 +96,7 @@ export default function Footer() {
                 <MessageCircle className="h-5 w-5 text-green-400" />
                 <div>
                   <div className="text-sm text-slate-300">WhatsApp</div>
-                  <div className="text-sm text-white">+92 316 5249017</div>
+                  <div className="text-sm text-white">0316 5249017</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">

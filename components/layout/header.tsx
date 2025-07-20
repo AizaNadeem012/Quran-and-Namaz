@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetPortal, SheetOverlay, SheetTrigger, SheetClose, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
-import { Menu, BookOpen, MessageCircle } from "lucide-react"
+import { Menu, BookOpen, MessageCircle, MessageSquare } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 export default function Header() {
@@ -68,6 +68,16 @@ export default function Header() {
                   <Link href="/register">
                     <Button className="w-full !bg-[#060957] !hover:bg-[#060957] text-white">Register Now</Button>
                   </Link>
+                  <a 
+                    href="https://wa.me/03165249017?text=Assalamu%20Alaikum!%20I%20would%20like%20to%20join%20Quran%20and%20Namaz%20Academy.%20Please%20provide%20more%20information%20about%20your%20courses%20and%20registration%20process."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white border-green-600">
+                      <MessageSquare className="mr-2 h-4 w-4 text-white" />
+                      WhatsApp Us
+                    </Button>
+                  </a>
                 </div>
               </div>
             </SheetContent>
@@ -93,6 +103,16 @@ export default function Header() {
                 Register Now
               </Button>
             </Link>
+            <a 
+              href="https://wa.me/03165249017?text=Assalamu%20Alaikum!%20I%20would%20like%20to%20join%20Quran%20and%20Namaz%20Academy.%20Please%20provide%20more%20information%20about%20your%20courses%20and%20registration%20process."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white border-green-600">
+                <MessageSquare className="mr-2 h-4 w-4 text-white" />
+                WhatsApp
+              </Button>
+            </a>
           </div>
         </div>
       </div>

@@ -180,13 +180,8 @@ export default function CoursesPage() {
                     </div>
                   </div>
 
-                  {/* Schedule */}
+                  {/* Teacher Info */}
                   <div className="bg-white/50 rounded-lg p-3 space-y-2">
-                    <div className="text-sm font-medium text-slate-800">Class Schedule:</div>
-                    <div className="text-sm text-slate-600">
-                      <div>🇬🇧 UK: {course.ukTime}</div>
-                      <div>🇺🇸 USA: {course.usaTime}</div>
-                    </div>
                     <div className="text-sm text-green-700 font-medium">Teacher certified by Wafaq ul Madaris</div>
                     <a
                       href="https://teams.live.com/l/invite/FEAUg-LwLJlBFRYsAI?v=g1"

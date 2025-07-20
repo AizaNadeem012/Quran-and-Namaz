@@ -1,7 +1,7 @@
-import NextAuth from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-export const authOptions = {
+export const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -15,13 +15,13 @@ export const authOptions = {
           credentials?.username === "admin" &&
           credentials?.password === "admin123"
         ) {
-          return { id: 1, name: "Admin" };
+          return { id: "1", name: "Admin" };
         }
         return null;
       }
     })
   ],
-  session: { strategy: "jwt" }
+  session: { strategy: "jwt" as const }
 };
 
 const handler = NextAuth(authOptions);

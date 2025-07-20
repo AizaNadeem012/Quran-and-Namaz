@@ -6,6 +6,17 @@ import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 
 const filePath = path.join(process.cwd(), 'submissions.json');
 
+interface Submission {
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  subject: string;
+  message: string;
+  createdAt: string;
+  updatedAt?: string;
+}
+
 export async function PUT(
   req: Request,
   { params }: { params: { id: string } }
@@ -20,12 +31,12 @@ export async function PUT(
     const { id } = params;
     const { firstName, lastName, email, subject, message } = await req.json();
 
-    let submissions = [];
+    let submissions: Submission[] = [];
     if (fs.existsSync(filePath)) {
       const fileData = fs.readFileSync(filePath, 'utf-8');
       submissions = JSON.parse(fileData);
     }
-    const index = submissions.findIndex((s) => s.id === id);
+    const index = submissions.findIndex((s: Submission) => s.id === id);
     if (index === -1) {
       return NextResponse.json({ message: 'Submission not found' }, { status: 404 });
     }
@@ -58,12 +69,12 @@ export async function DELETE(
 
   try {
     const { id } = params;
-    let submissions = [];
+    let submissions: Submission[] = [];
     if (fs.existsSync(filePath)) {
       const fileData = fs.readFileSync(filePath, 'utf-8');
       submissions = JSON.parse(fileData);
     }
-    const index = submissions.findIndex((s) => s.id === id);
+    const index = submissions.findIndex((s: Submission) => s.id === id);
     if (index === -1) {
       return NextResponse.json({ message: 'Submission not found' }, { status: 404 });
     }

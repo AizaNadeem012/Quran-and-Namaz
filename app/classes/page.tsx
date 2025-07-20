@@ -169,15 +169,10 @@ export default function ClassesPage() {
                     <Badge className="bg-slate-100 text-slate-700 text-xs">{classItem.course}</Badge>
                   </div>
                   <CardTitle className="text-lg text-slate-800 font-arabic">{classItem.title}</CardTitle>
-                  <CardDescription className="text-slate-600 font-medium">{classItem.time}</CardDescription>
                 </CardHeader>
 
                 <CardContent className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="flex items-center gap-2 text-slate-600">
-                      <BookOpen className="h-4 w-4" />
-                      <span>{classItem.teacher}</span>
-                    </div>
+                  <div className="grid grid-cols-1 gap-4 text-sm">
                     <div className="flex items-center gap-2 text-slate-600">
                       <Clock className="h-4 w-4" />
                       <span>{classItem.duration}</span>

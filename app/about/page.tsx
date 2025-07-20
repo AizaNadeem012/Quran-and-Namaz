@@ -115,7 +115,7 @@ export default function AboutPage() {
     <div className="relative py-20 bg-gradient-to-br from-blue-50 via-white to-yellow-50 overflow-hidden min-h-screen px-4">
       {/* Quranic Ayah Banner */}
       <div className="w-full flex justify-center mb-8">
-        <span className="text-5xl md:text-6xl lg:text-7xl text-[#fbbf24] text-center font-arabic drop-shadow-lg" style={{fontFamily: 'Noto Nastaliq Urdu, serif', letterSpacing: '1px', textShadow: '0 2px 16px #fbbf24, 0 1px 1px #fff'}}>قرآن اور نماز</span>
+        <span className="text-5xl md:text-6xl lg:text-7xl text-[#fbbf24] text-center font-arabic drop-shadow-lg" style={{ fontFamily: 'Noto Nastaliq Urdu, serif', letterSpacing: '1px', textShadow: '0 2px 16px #fbbf24, 0 1px 1px #fff' }}>قرآن اور نماز</span>
       </div>
       {/* Our Story */}
       <div className="mb-20">
@@ -133,19 +133,17 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-slate-600 leading-relaxed">
               <p>
-                In 2020, during a time when the world was seeking connection and spiritual guidance, a group of
-                passionate Islamic scholars and educators came together with a shared vision: to bridge the gap
-                between traditional Islamic education and the modern world's needs.
+                Our Journey: From a Small Beginning to a Global Mission
+
+                Hafiz Nisar Ahmed Mustafa began his journey with the Holy Quran at a young age, driven by a deep love for the Book of Allah and a passion to serve the Ummah. Raised in a humble environment, he memorized the Quran under the guidance of dedicated teachers who instilled in him not just knowledge, but a sense of responsibility—to spread the light of the Quran far and wide.
+
+              </p>
+              <p>What started as a small local Quran class in his home city quickly grew into something far greater than he ever imagined. With sincerity, patience, and a firm belief in the transformative power of the Quran, Hafiz Nisar Ahmed began teaching a few students—many of whom came seeking clarity, peace, and connection with their faith.</p>
+              <p>
+                Through word of mouth and the blessings of Allah, more students began to join. Soon, his teachings reached beyond the borders of his city, then his country, and today—by the grace of Allah—Hafiz Nisar Ahmed Mustafa is known worldwide, offering online Quran classes to students across continents.
               </p>
               <p>
-                Recognizing the challenges faced by Muslim families in the UK, USA, and beyond in accessing authentic
-                Quranic education, we developed a comprehensive online platform that maintains the sanctity and
-                authenticity of traditional Islamic teaching methods while leveraging the power of modern technology.
-              </p>
-              <p>
-                Today, Alhamdulillah, we proudly serve over 500 students across different continents and time zones,
-                with a dedicated team of 50+ qualified teachers who are not just educators but spiritual mentors
-                guiding students on their journey of Islamic learning.
+                His mission has always been simple: To help every Muslim, young or old, connect with the Quran—not just through recitation, but with understanding, reflection, and love.
               </p>
             </div>
           </motion.div>
