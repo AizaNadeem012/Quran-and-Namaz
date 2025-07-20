@@ -1,4 +1,3 @@
-// Utility function for conditional classNames
-export function cn(...classes: (string | undefined | null | false)[]): string {
+export function cn(...classes: (string | undefined | false | null)[]) {
   return classes.filter(Boolean).join(' ');
 } 
