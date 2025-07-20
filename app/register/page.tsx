@@ -97,14 +97,24 @@ export default function RegisterPage() {
           <div className="lg:col-span-2">
             <Card className="border-2 border-slate-200 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-blue-50 to-amber-50">
-                <CardTitle className="text-2xl text-slate-800 font-arabic">Student Registration Form</CardTitle>
+                <CardTitle className="text-2xl text-slate-800 font-arabic">Fill Registration Form Here</CardTitle>
                 <CardDescription className="text-slate-600">
                   Please fill out all required information to get started with your Islamic education journey
                 </CardDescription>
               </CardHeader>
               <CardContent className="p-6">
-                {/* Custom Registration Form */}
-                <RegistrationForm />
+                {/* Google Form Embed */}
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLScEAK19cXK7wAzTK1tlYJkf3V54CYCeyw2NUqXiMtN9JVV0yQ/viewform?usp=header"
+                  width="100%"
+                  height="800"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                  title="Registration Form"
+                >
+                  Loading…
+                </iframe>
 
                 {/* Form Fields Preview */}
                 <div className="mt-6 space-y-4 p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl border border-blue-100">
